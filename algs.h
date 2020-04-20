@@ -23,10 +23,7 @@ void bogo(vector<int> & V) {
 }
 
 void bad(vector<int> & V) {
-	do { 
-		if(is_sorted(V.begin(), V.end()))
-			return;
-	} while(next_permutation(V.begin(), V.end()));
+	while(next_permutation(V.begin(), V.end()));
 }
 
 void worse(vector<int> & V) {
