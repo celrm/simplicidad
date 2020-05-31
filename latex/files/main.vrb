@@ -1,0 +1,19 @@
+\begin{center}
+^^I{\LARGE\textbf{Algoritmo 1.3. (Slow Sort)} \ee{26A0}}\\[30pt]
+\end{center}
+\begin{center}
+\begin{CenteredBox}
+\begin{lstlisting}[linewidth=0.5\textwidth]
+    def slow(L, i, j) :
+        if i >= j :
+            return
+        m = (i+j) // 2
+        slow(L, i, m)
+        slow(L, m + 1, j)
+        if L[j] < L[m] :
+            L[j], L[m] = L[m], L[j]
+        slow(L, i, j-1)
+        return L
+\end{lstlisting}
+\end{CenteredBox}
+\end{center}
